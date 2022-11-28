@@ -1,0 +1,52 @@
+28-Nov-2022 17:31:06.145 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.5.12
+28-Nov-2022 17:31:06.146 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Mar 8 2017 17:41:47 UTC
+28-Nov-2022 17:31:06.146 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.5.12.0
+28-Nov-2022 17:31:06.146 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+28-Nov-2022 17:31:06.146 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            12.6
+28-Nov-2022 17:31:06.146 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          aarch64
+28-Nov-2022 17:31:06.146 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /Library/Java/JavaVirtualMachines/temurin-19.jdk/Contents/Home
+28-Nov-2022 17:31:06.146 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           19.0.1+10
+28-Nov-2022 17:31:06.146 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Eclipse Adoptium
+28-Nov-2022 17:31:06.146 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/javadeveloper/Library/Caches/JetBrains/IntelliJIdea2021.2/tomcat/799ce06b-4fbd-4aa9-9394-7d6894294179
+28-Nov-2022 17:31:06.146 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /usr/local/tomcat-8.5.12
+28-Nov-2022 17:31:06.147 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/javadeveloper/Library/Caches/JetBrains/IntelliJIdea2021.2/tomcat/799ce06b-4fbd-4aa9-9394-7d6894294179/conf/logging.properties
+28-Nov-2022 17:31:06.147 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+28-Nov-2022 17:31:06.147 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcom.sun.management.jmxremote=
+28-Nov-2022 17:31:06.147 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcom.sun.management.jmxremote.port=1099
+28-Nov-2022 17:31:06.147 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcom.sun.management.jmxremote.ssl=false
+28-Nov-2022 17:31:06.147 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcom.sun.management.jmxremote.password.file=/Users/javadeveloper/Library/Caches/JetBrains/IntelliJIdea2021.2/tomcat/799ce06b-4fbd-4aa9-9394-7d6894294179/jmxremote.password
+28-Nov-2022 17:31:06.147 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcom.sun.management.jmxremote.access.file=/Users/javadeveloper/Library/Caches/JetBrains/IntelliJIdea2021.2/tomcat/799ce06b-4fbd-4aa9-9394-7d6894294179/jmxremote.access
+28-Nov-2022 17:31:06.147 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.rmi.server.hostname=127.0.0.1
+28-Nov-2022 17:31:06.148 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+28-Nov-2022 17:31:06.148 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+28-Nov-2022 17:31:06.148 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/javadeveloper/Library/Caches/JetBrains/IntelliJIdea2021.2/tomcat/799ce06b-4fbd-4aa9-9394-7d6894294179
+28-Nov-2022 17:31:06.148 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Library/Tomcat
+28-Nov-2022 17:31:06.148 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Library/Tomcat/temp
+28-Nov-2022 17:31:06.148 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /Users/javadeveloper/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+28-Nov-2022 17:31:06.165 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8180"]
+28-Nov-2022 17:31:06.171 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+28-Nov-2022 17:31:06.172 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+28-Nov-2022 17:31:06.172 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+28-Nov-2022 17:31:06.173 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 170 ms
+28-Nov-2022 17:31:06.186 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service Catalina
+28-Nov-2022 17:31:06.186 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.5.12
+28-Nov-2022 17:31:06.189 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler [http-nio-8180]
+28-Nov-2022 17:31:06.192 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler [ajp-nio-8009]
+28-Nov-2022 17:31:06.193 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 19 ms
+Connected to server
+28-Nov-2022 17:31:06.550 WARNING [RMI TCP Connection(2)-127.0.0.1] org.apache.tomcat.util.descriptor.web.WebXml.setVersion Unknown version string [4.0]. Default version will be used.
+28-Nov-2022 17:31:06.633 INFO [RMI TCP Connection(2)-127.0.0.1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/Users/javadeveloper/IdeaProjects/databoy/target/databoy-1.0-SNAPSHOT/WEB-INF/lib/log4j-slf4j-impl-2.13.3.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/Users/javadeveloper/IdeaProjects/databoy/target/databoy-1.0-SNAPSHOT/WEB-INF/lib/slf4j-simple-1.6.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+WARNING: sun.reflect.Reflection.getCallerClass is not supported. This will impact performance.
+28-Nov-2022 17:31:06.849 SEVERE [RMI TCP Connection(2)-127.0.0.1] org.apache.catalina.core.StandardContext.startInternal One or more listeners failed to start. Full details will be found in the appropriate container log file
+28-Nov-2022 17:31:06.853 SEVERE [RMI TCP Connection(2)-127.0.0.1] org.apache.catalina.core.StandardContext.startInternal Context [] startup failed due to previous errors
+28-Nov-2022 17:31:06.859 WARNING [RMI TCP Connection(2)-127.0.0.1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalsForLeaks When running on Java 9 you need to add "--add-opens=java.base/java.lang=ALL-UNNAMED" to the JVM command line arguments to enable ThreadLocal memory leak detection. Alternatively, you can suppress this warning by disabling ThreadLocal memory leak detection.
+28-Nov-2022 17:31:06.859 WARNING [RMI TCP Connection(2)-127.0.0.1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesRmiTargets When running on Java 9 you need to add "--add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED" to the JVM command line arguments to enable RMI Target memory leak detection. Alternatively, you can suppress this warning by disabling RMI Target memory leak detection.
+28-Nov-2022 17:31:16.198 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /usr/local/tomcat-8.5.12/webapps/manager
+28-Nov-2022 17:31:16.233 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /usr/local/tomcat-8.5.12/webapps/manager has finished in 34 ms
+28-Nov-2022 17:33:32.130 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+28-Nov-2022 17:33:32.131 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8180"]
