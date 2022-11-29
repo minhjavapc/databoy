@@ -1,6 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:mirage="http://www.springframework.org/schema/data/mirage"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:jee="http://www.springframework.org/schema/jee"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee.xsd
+	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+	http://www.springframework.org/schema/data/mirage http://www.springframework.org/schema/data/mirage/spring-mirage-1.0.xsd">
+
+    <context:annotation-config/>
+    <context:property-placeholder location="classpath:datasource.properties"/>
+
+    <context:component-scan base-package="org.springframework.data.mirage.repository"/>
+
+    <!-- for CamelCase in Java, SnakeCase in DB -->
+    <bean id="nameConverter" class="jp.sf.amateras.mirage.naming.DefaultNameConverter"/>
+
+    <!-- for Databoy db -->
+    <bean id="dataSourceDataboy" class="org.springframework.jdbc.datasource.DriverManagerDataSource" primary="true">
+        <property name="driverClassName" value="${datasource.databoy.driver.oracle}"/>
+        <property name="url" value="${datasource.databoy.oracle.url}"/>
+        <property name="username" value="${datasource.databoy.oracle.username}"/>
+        <property name="password" value="${datasource.databoy.oracle.password}"/>
+    </bean>
+
+    <!-- transaction manager -->
+    <bean id="transactionManagerDataboy" class="org.springframework.jdbc.datasource.DataSourceTransactionManager" primary="true">
+        <property name="dataSource" ref="dataSourceDataboy"/>
+    </bean>
+
+    <!-- connection provider -->
+    <bean id="connectionProviderDataboy" class="jp.sf.amateras.mirage.integration.spring.SpringConnectionProvider" primary="true">
+        <property name="transactionManager" ref="transactionManagerDataboy"/>
+    </bean>
+
+    <tx:annotation-driven/>
+
+    <bean id="transactionManager" class="org.springframework.data.transaction.ChainedTransactionManager">
+        <constructor-arg>
+            <list>
+                <ref bean="transactionManagerDataboy"/>
+            </list>
+        </constructor-arg>
+    </bean>
+
+    <bean id="oracleDialect" class="jp.sf.amateras.mirage.dialect.OracleDialect"/>
+
+    <bean id="sqlManagerDataboy" class="jp.sf.amateras.mirage.SqlManagerImpl" primary="true">
+        <property name="dialect" ref="oracleDialect"/>
+        <property name="nameConverter" ref="nameConverter"/>
+        <property name="connectionProvider" ref="connectionProviderDataboy"/>
+    </bean>
+
+    <mirage:repositories base-package="vn.com.unit.jcanary.repository, vn.com.databoy.repository"
+                         sql-manager-ref="sqlManagerDataboy"/>
+
+    <bean class="org.springframework.data.mirage.repository.support.MiragePersistenceExceptionTranslator"/>
+    <bean class="org.springframework.data.mirage.repository.support.FieldPropertyExtractorInitializer"/>
+    <!--	<bean class="org.springframework.data.mirage.repository.support.EnableSLF4JBridgeHandler"/>-->
 
 </beans>

@@ -30,9 +30,9 @@
 	<resources mapping="/static/**" location="/resources/" />
 	<resources mapping="/web-app/**" location="/WEB-INF/" />
 
- 	<beans:bean id="multipartResolver"
- 	   class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
-     </beans:bean>
+<!-- 	<beans:bean id="multipartResolver"-->
+<!-- 	   class="org.springframework.web.multipart.commons.CommonsMultipartResolver">-->
+<!--     </beans:bean>-->
 	
 	<context:annotation-config />
 </beans:beans>

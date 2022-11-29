@@ -9,9 +9,9 @@
     <context:annotation-config />
     <context:property-placeholder location="classpath:datasource.properties" />
 
-    <context:component-scan base-package="vn.com.databoy.*" />
+    <context:component-scan base-package="vn.com.databoy.*, vn.com.unit.jcanary.*" />
 
-<!--    <import resource="./datasourceConfig.xml" />-->
+    <import resource="./datasourceConfig.xml" />
 
 <!--    <import resource="./spring-security-context.xml" />-->
 

@@ -19,6 +19,10 @@
         <org-springframework-version>4.3.20.RELEASE</org-springframework-version>
         <!-- Spring Security -->
         <org-springframework-security-version>4.2.9.RELEASE</org-springframework-security-version>
+
+        <!-- JDBC - Mirage -->
+        <spring-data-mirage-version>0.3.2.RELEASE</spring-data-mirage-version>
+        <mirage-version>1.2.5</mirage-version>
     </properties>
 
     <dependencies>
@@ -154,68 +158,208 @@
             <scope>provided</scope>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>1.7.25</version>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>1.6.1</version>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-simple</artifactId>
-            <version>1.6.1</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-api</artifactId>
-            <version>2.13.3</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-core</artifactId>
-            <version>2.13.3</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-slf4j-impl</artifactId>
-            <version>2.13.3</version>
-        </dependency>
-        <dependency>
-            <groupId> org.apache.cassandra</groupId>
-            <artifactId>cassandra-all</artifactId>
-            <version>0.8.1</version>
+<!--        <dependency>-->
+<!--            <groupId>org.slf4j</groupId>-->
+<!--            <artifactId>slf4j-api</artifactId>-->
+<!--            <version>1.7.25</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.slf4j</groupId>-->
+<!--            <artifactId>slf4j-api</artifactId>-->
+<!--            <version>1.6.1</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.slf4j</groupId>-->
+<!--            <artifactId>slf4j-simple</artifactId>-->
+<!--            <version>1.6.1</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.apache.logging.log4j</groupId>-->
+<!--            <artifactId>log4j-api</artifactId>-->
+<!--            <version>2.13.3</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.apache.logging.log4j</groupId>-->
+<!--            <artifactId>log4j-core</artifactId>-->
+<!--            <version>2.13.3</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.apache.logging.log4j</groupId>-->
+<!--            <artifactId>log4j-slf4j-impl</artifactId>-->
+<!--            <version>2.13.3</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId> org.apache.cassandra</groupId>-->
+<!--            <artifactId>cassandra-all</artifactId>-->
+<!--            <version>0.8.1</version>-->
 
+<!--            <exclusions>-->
+<!--                <exclusion>-->
+<!--                    <groupId>org.slf4j</groupId>-->
+<!--                    <artifactId>slf4j-log4j12</artifactId>-->
+<!--                </exclusion>-->
+<!--                <exclusion>-->
+<!--                    <groupId>log4j</groupId>-->
+<!--                    <artifactId>log4j</artifactId>-->
+<!--                </exclusion>-->
+<!--            </exclusions>-->
+
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.docx4j</groupId>-->
+<!--            <artifactId>docx4j</artifactId>-->
+<!--            <version>3.3.4</version>-->
+<!--            <exclusions>-->
+<!--                <exclusion>-->
+<!--                    <groupId>org.slf4j</groupId>-->
+<!--                    <artifactId>slf4j-log4j12</artifactId>-->
+<!--                </exclusion>-->
+<!--                <exclusion>-->
+<!--                    <groupId>log4j</groupId>-->
+<!--                    <artifactId>log4j</artifactId>-->
+<!--                </exclusion>-->
+<!--            </exclusions>-->
+<!--        </dependency>-->
+        <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.22</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+            <version>1.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-mirage</artifactId>
+            <version>0.3.2.RELEASE</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.slf4j</groupId>
-                    <artifactId>slf4j-log4j12</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>log4j</groupId>
-                    <artifactId>log4j</artifactId>
+                    <artifactId>slf4j-api</artifactId>
                 </exclusion>
             </exclusions>
 
+            <scope>system</scope>
+            <systemPath>${project.basedir}/src/main/webapp/WEB-INF/lib/spring-data-mirage-0.3.2.RELEASE.jar</systemPath>
         </dependency>
+
+<!--        <dependency>-->
+<!--            <groupId>org.slf4j</groupId>-->
+<!--            <artifactId>jul-to-slf4j</artifactId>-->
+<!--            <version>1.7.30</version>-->
+<!--        </dependency>-->
+
         <dependency>
-            <groupId>org.docx4j</groupId>
-            <artifactId>docx4j</artifactId>
-            <version>3.3.4</version>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-commons</artifactId>
+            <version>1.9.0.RELEASE</version>
             <exclusions>
                 <exclusion>
-                    <groupId>org.slf4j</groupId>
-                    <artifactId>slf4j-log4j12</artifactId>
+                    <groupId>org.springframework</groupId>
+                    <artifactId>spring-beans</artifactId>
                 </exclusion>
                 <exclusion>
-                    <groupId>log4j</groupId>
-                    <artifactId>log4j</artifactId>
+                    <groupId>org.springframework</groupId>
+                    <artifactId>spring-core</artifactId>
                 </exclusion>
             </exclusions>
         </dependency>
+
+        <!-- Mirage -->
+        <dependency>
+            <groupId>jp.sf.amateras</groupId>
+            <artifactId>mirage</artifactId>
+            <version>${mirage-version}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.github.noraui/ojdbc7 -->
+        <!--<dependency>-->
+        <!--<groupId>com.oracle.ojdbc</groupId>-->
+        <!--<artifactId>ojdbc8</artifactId>-->
+        <!--<version>19.3.0.0</version>-->
+        <!--</dependency>-->
+
+        <!-- https://mvnrepository.com/artifact/com.oracle.jdbc/ojdbc7 -->
+        <dependency>
+            <groupId>com.oracle.jdbc</groupId>
+            <artifactId>ojdbc7</artifactId>
+            <version>ojdbc7-7.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/src/main/webapp/WEB-INF/lib/ojdbc7-7.0.jar</systemPath>
+        </dependency>
+
+
+        <!-- Common Project -->
+        <dependency>
+            <groupId>vn.com.unit.common</groupId>
+            <artifactId>ukbank.lpgw.common</artifactId>
+            <version>1.0</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.fasterxml.jackson.core</groupId>
+                    <artifactId>jackson-databind</artifactId>
+                </exclusion>
+            </exclusions>
+
+            <scope>system</scope>
+            <systemPath>${project.basedir}/src/main/webapp/WEB-INF/lib/CommonProject-2021-07-29_21_45_42.954.jar</systemPath>
+
+        </dependency>
+
+        <!-- jCanary Project -->
+        <dependency>
+            <groupId>vn.com.unit.jcanary</groupId>
+            <artifactId>ukbank.lpgw.jcanary-napas</artifactId>
+            <version>1.0</version>
+            <!--<classifier>classes</classifier> -->
+            <exclusions>
+                <exclusion>
+                    <groupId>org.codehaus.jackson</groupId>
+                    <artifactId>jackson-mapper-asl</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.fasterxml.jackson.core</groupId>
+                    <artifactId>jackson-databind</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>javax.mail</groupId>
+                    <artifactId>javax.mail-api</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>javax.mail</groupId>
+                    <artifactId>mail</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>it.sauronsoftware</groupId>
+                    <artifactId>jave</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.springframework</groupId>
+                    <artifactId>spring-webmvc</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>commons-fileupload</groupId>
+                    <artifactId>commons-fileupload</artifactId>
+                </exclusion>
+            </exclusions>
+
+            <scope>system</scope>
+            <systemPath>${project.basedir}/src/main/webapp/WEB-INF/lib/jCanary.jar</systemPath>
+
+        </dependency>
+        <dependency>
+            <groupId>com.miragesql</groupId>
+            <artifactId>miragesql</artifactId>
+            <version>2.1.2</version>
+        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.sun.xml.ws</groupId>-->
+<!--            <artifactId>jaxws-rt</artifactId>-->
+<!--            <version>4.0.0-M4</version>-->
+<!--        </dependency>-->
     </dependencies>
 
     <build>
@@ -226,5 +370,31 @@
                 <version>3.3.1</version>
             </plugin>
         </plugins>
+        <resources>
+            <resource>
+                <filtering>true</filtering>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*.properties</include>
+                    <include>**/*.xml</include>
+                </includes>
+            </resource>
+            <resource>
+                <filtering>false</filtering>
+                <directory>src/main/resources</directory>
+                <excludes>
+                    <exclude>**/*.properties</exclude>
+                    <exclude>**/*.xml</exclude>
+                </excludes>
+            </resource>
+            <resource>
+                <filtering>true</filtering>
+                <directory>src/main/java/vn/com/databoy/repository</directory>
+                <targetPath>${basedir}/target/classes/vn/com/databoy/repository</targetPath>
+                <includes>
+                    <include>**/*.sql</include>
+                </includes>
+            </resource>
+        </resources>
     </build>
 </project>

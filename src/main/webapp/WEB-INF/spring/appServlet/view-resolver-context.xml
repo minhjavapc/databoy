@@ -3,14 +3,19 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-<!--    <bean id="templateResolver" class="org.thymeleaf.templateresolver.ServletContextTemplateResolver">-->
-<!--        <property name="prefix" value="/WEB-INF/templates/" />-->
-<!--        <property name="suffix" value=".html" />-->
-<!--        <property name="templateMode" value="HTML5" />-->
-<!--        <property name="cacheable" value="false" />-->
+    <bean id="templateResolver" class="org.thymeleaf.templateresolver.ServletContextTemplateResolver">
+        <property name="prefix" value="/WEB-INF/templates/" />
+        <property name="suffix" value=".html" />
+        <property name="templateMode" value="HTML5" />
+        <property name="cacheable" value="false" />
+    </bean>
+    <bean id="templateEngine" class="org.thymeleaf.spring4.SpringTemplateEngine">
+        <property name="templateResolver" ref="templateResolver" />
+    </bean>
+<!--    <bean class="org.thymeleaf.spring4.view.ThymeleafViewResolver">-->
+<!--        <property name="templateEngine" ref="templateEngine" />-->
 <!--    </bean>-->
-
-<!--    &lt;!&ndash; Thymeleaf Template Engine &ndash;&gt;-->
+    <!-- Thymeleaf Template Engine -->
 <!--    <bean id="templateEngine" class="org.thymeleaf.spring4.SpringTemplateEngine">-->
 <!--        <property name="templateResolver" ref="templateResolver" />-->
 <!--        <property name="additionalDialects">-->
@@ -23,10 +28,10 @@
 <!--        </property>-->
 <!--    </bean>-->
 
-<!--    &lt;!&ndash; Resolves view names returned by Controllers as names of Tiles definitions &ndash;&gt;-->
-<!--    <bean id="tilesViewResolver" class="org.thymeleaf.spring4.view.ThymeleafViewResolver">-->
+    <!-- Resolves view names returned by Controllers as names of Tiles definitions -->
+    <bean id="tilesViewResolver" class="org.thymeleaf.spring4.view.ThymeleafViewResolver">
 <!--        <property name="viewClass" value="org.thymeleaf.extras.tiles2.spring4.web.view.ThymeleafTilesView" />-->
-<!--        <property name="templateEngine" ref="templateEngine" />-->
-<!--        <property name="characterEncoding" value="UTF-8" />-->
-<!--    </bean>-->
+        <property name="templateEngine" ref="templateEngine" />
+        <property name="characterEncoding" value="UTF-8" />
+    </bean>
 </beans>
