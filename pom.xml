@@ -309,7 +309,7 @@
 
         </dependency>
 
-        <!-- jCanary Project -->
+<!--        &lt;!&ndash; jCanary Project &ndash;&gt;-->
         <dependency>
             <groupId>vn.com.unit.jcanary</groupId>
             <artifactId>ukbank.lpgw.jcanary-napas</artifactId>

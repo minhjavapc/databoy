@@ -34,18 +34,18 @@
     </servlet-mapping>
 
     <!-- Define error exception page -->
-    <error-page>
-        <error-code>404</error-code>
-        <location>/404</location>
-    </error-page>
-    <error-page>
-        <error-code>500</error-code>
-        <location>/500</location>
-    </error-page>
-    <error-page>
-        <error-code>400</error-code>
-        <location>/400</location>
-    </error-page>
+<!--    <error-page>-->
+<!--        <error-code>404</error-code>-->
+<!--        <location>/404</location>-->
+<!--    </error-page>-->
+<!--    <error-page>-->
+<!--        <error-code>500</error-code>-->
+<!--        <location>/500</location>-->
+<!--    </error-page>-->
+<!--    <error-page>-->
+<!--        <error-code>400</error-code>-->
+<!--        <location>/400</location>-->
+<!--    </error-page>-->
 
 <!--    &lt;!&ndash; Define encoding UTF-8 &ndash;&gt;-->
 <!--    <filter>-->

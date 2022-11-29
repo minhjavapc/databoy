@@ -33,6 +33,8 @@
         <property name="dataSource" ref="dataSourceDataboy"/>
     </bean>
 
+    <tx:annotation-driven transaction-manager="transactionManagerDataboy" proxy-target-class="false" />
+
     <!-- connection provider -->
     <bean id="connectionProviderDataboy" class="jp.sf.amateras.mirage.integration.spring.SpringConnectionProvider" primary="true">
         <property name="transactionManager" ref="transactionManagerDataboy"/>
@@ -54,9 +56,16 @@
         <property name="dialect" ref="oracleDialect"/>
         <property name="nameConverter" ref="nameConverter"/>
         <property name="connectionProvider" ref="connectionProviderDataboy"/>
+<!--        <property name="beanDescFactory">-->
+<!--            <bean class="com.miragesql.miragesql.bean.BeanDescFactory">-->
+<!--                <property name="propertyExtractor">-->
+<!--                    <bean class="com.miragesql.miragesql.bean.FieldPropertyExtractor" />-->
+<!--                </property>-->
+<!--            </bean>-->
+<!--        </property>-->
     </bean>
 
-    <mirage:repositories base-package="vn.com.unit.jcanary.repository, vn.com.databoy.repository"
+    <mirage:repositories base-package="vn.com.databoy.repository"
                          sql-manager-ref="sqlManagerDataboy"/>
 
     <bean class="org.springframework.data.mirage.repository.support.MiragePersistenceExceptionTranslator"/>

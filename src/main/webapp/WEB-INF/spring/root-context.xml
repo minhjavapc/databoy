@@ -9,7 +9,7 @@
     <context:annotation-config />
     <context:property-placeholder location="classpath:datasource.properties" />
 
-    <context:component-scan base-package="vn.com.databoy.*, vn.com.unit.jcanary.*" />
+    <context:component-scan base-package="vn.com.databoy.*" />
 
     <import resource="./datasourceConfig.xml" />
 

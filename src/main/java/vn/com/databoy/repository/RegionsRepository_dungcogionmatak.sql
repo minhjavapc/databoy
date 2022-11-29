@@ -1,0 +1,4 @@
+SELECT *
+FROM REGIONS
+WHERE
+        REGION_ID = 1
